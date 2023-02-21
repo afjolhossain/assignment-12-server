@@ -41,8 +41,8 @@ async function verifyToken(req, res, next) {
 async function run() {
   try {
     await client.connect();
-    const database = client.db("Assignment-12");
-    const Collectionexplores = database.collection("explores");
+    const database = client.db("MotorDB");
+    const Collectionexplores = database.collection("BikeServices");
     const orderCollection = database.collection("orders");
     const reviewCollection = database.collection("reviews");
     const usersCollection = database.collection("users");
@@ -171,7 +171,7 @@ async function run() {
 run().catch(console.dir);
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("hello motor bike");
 });
 
 app.listen(port, () => {
